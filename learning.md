@@ -75,5 +75,10 @@ cdee807 HEAD@{1}: reset: moving to HEAD^
 cdee807 HEAD@{3}: commit: add learing.md, modify README
 d35a127 HEAD@{4}: commit (initial): add README
 ```
+- git checkout
+    + -- file 参数：--不可少，用于工作修改想要撤回即直接丢掉工作区修改，此时还未添加到暂存区
+- git reset HEAD file
+    + 用于修改已提交至暂存区，这时使用该命令，撤销暂存区，返回至工作区。之后可以再使用git checkout -- file命令撤销修改
+
 
 
