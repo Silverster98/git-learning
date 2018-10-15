@@ -79,6 +79,16 @@ d35a127 HEAD@{4}: commit (initial): add README
     + -- file 参数：--不可少，用于工作修改想要撤回即直接丢掉工作区修改，此时还未添加到暂存区
 - git reset HEAD file
     + 用于修改已提交至暂存区，这时使用该命令，撤销暂存区，返回至工作区。之后可以再使用git checkout -- file命令撤销修改
+- git rm
+    + 删除文件后，使用该命令，之后再commit，这个文件算是删除了
+    + 如果说删错了，还未提交，那么可以使用 git checkout -- file 返回删除前的状态
+    + 如果已经提交，那么可以版本回退
+- git remote add origin remote-address
+    + 将本地库与远程库关联
+    + 关联后使用 git push -u origin master 第一次推送master分支所有内容
+    + 之后就可以使用 git push origin master 推送更新修改
+- git clone
+    + 一般我们先在远程服务器创建一个仓库，之后使用该命令将远程库下载在本地，之后本地修改，再推送
 
 
 
