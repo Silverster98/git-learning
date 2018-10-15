@@ -123,10 +123,26 @@ $ git branch
 - git merge
     + 该命令是将指定分支合并到当前分支
     + 所有如果要合并到master分支需要先回到master分支
-
+```
+$ git merge dev
+Updating dc661af..937db3e
+Fast-forward
+ learning.md | 38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+```
 - git branch -d branch-name
     + 合并之后就可以将分支删除，使用该命令
+```
+$ git branch -d dev
+Deleted branch dev (was 937db3e).
 
- 
+$ git branch
+* master
+```
+- git branch branch-name
+    + 创建分支
+- git checkout branch
+    + 切换分支
+
 
 
