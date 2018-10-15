@@ -83,6 +83,8 @@ d35a127 HEAD@{4}: commit (initial): add README
     + 删除文件后，使用该命令，之后再commit，这个文件算是删除了
     + 如果说删错了，还未提交，那么可以使用 git checkout -- file 返回删除前的状态
     + 如果已经提交，那么可以版本回退
+
+### 远程仓库
 - git remote add origin remote-address
     + 将本地库与远程库关联
     + 关联后使用 git push -u origin master 第一次推送master分支所有内容
@@ -90,5 +92,41 @@ d35a127 HEAD@{4}: commit (initial): add README
 - git clone
     + 一般我们先在远程服务器创建一个仓库，之后使用该命令将远程库下载在本地，之后本地修改，再推送
 
+### 分支管理
+master 分支，为主分支，一开始，master分支是一条线，HEAD指向master分支，就能确定当前分支，以及当前分支提交点。
+
+新建一个分支 dev，Git会新建一个dev指针，指向master相同提交，再把HEAD指向dev,表示当前分支在dev上。
+
+之后就是对dev分支进行操作，以后每次commit,只有dev分支会前进，master分支不动.dev分支工作完成后需要与master分支合并，最简单的方法就是让master指针指向dev。之后也可以将dev分支删除，这样就只剩下master分支了。
+
+- git checkout -b branch-name
+    + 用于创建分支，-b参数就是创建分支，并切换至这个分支
+```
+$ git checkout -b dev
+Switched to a new branch 'dev'
+M       learning.md
+
+相当于
+$ git branch dev
+$ git checkout dev
+```
+- git branch
+    + 查看当前分支
+```
+$ git branch
+* dev
+  master
+```
+
+然后提交修改，切换到master分支，可以发现之前修改都没有了。因为分支回到了master分支，在dev分支上的修改就不会显示。
+
+- git merge
+    + 该命令是将指定分支合并到当前分支
+    + 所有如果要合并到master分支需要先回到master分支
+
+- git branch -d branch-name
+    + 合并之后就可以将分支删除，使用该命令
+
+ 
 
 
