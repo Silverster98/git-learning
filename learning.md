@@ -162,8 +162,7 @@ $ git branch
     + 同步失败，git branch --set-upstream branch-name origin/branch-name，本地分支和远程分支的链接关系进行创建
 - git checkout -b branch-name origin/branch-name
     + 在本地创建和远程分支对应的分支
-- git branch --set-upstream branch-name origin/branch-name
-    + 
+
 
 
 
