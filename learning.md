@@ -143,6 +143,27 @@ $ git branch
     + 创建分支
 - git checkout branch
     + 切换分支
+- git log --graph
+    + 查看分支图
+    + 当合并发生冲突时，首先解决冲突，之后再进行合并
+- git stash
+    + 保存工作现场，对当前工作还未完成，也未提交，但是要转向别的分支，此时可以使用该命令保存现场，之后在返回此分支进行工作
+    + git stash apply：恢复工作现场，但是stash中的内容并未删除，还需使用git stash drop 来删除
+    + git stash pop：该命令相当于git stash apply 和 git stash drop
+    + git stash list：查看当前保存的stash列表
+- git branch -D branch-name
+    + 强行删除一个还未合并的分支
+- git remote
+    + 查看远程库信息
+    + -v参数 详细查看
+- git push origin branch-name
+    + 从本地推送分支至远程库
+    + 推送失败，使用git pull 与远程库同步一下
+    + 同步失败，git branch --set-upstream branch-name origin/branch-name，本地分支和远程分支的链接关系进行创建
+- git checkout -b branch-name origin/branch-name
+    + 在本地创建和远程分支对应的分支
+- git branch --set-upstream branch-name origin/branch-name
+    + 
 
 
 
