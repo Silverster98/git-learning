@@ -166,3 +166,13 @@ $ git branch
 - 通过.gitignore文件来避免一些文件或文件夹加入git
     + 在工程根目录下新建一个.gitignore的文件，然后向里面加入排除的文件或文件夹
 
+- 配置别名
+    + git config --global alias.st status
+    + git config --global alias.br branch
+    + git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+
+### 完
+
+参考：[廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
