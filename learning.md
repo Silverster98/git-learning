@@ -163,6 +163,6 @@ $ git branch
 - git checkout -b branch-name origin/branch-name
     + 在本地创建和远程分支对应的分支
 
-
-
+- 通过.gitignore文件来避免一些文件或文件夹加入git
+    + 在工程根目录下新建一个.gitignore的文件，然后向里面加入排除的文件或文件夹
 
